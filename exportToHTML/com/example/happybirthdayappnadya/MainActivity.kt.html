@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.happybirthdayappnadya</span>
+
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import androidx.activity.ComponentActivity</span>
+<span class="s1">import androidx.activity.compose.setContent</span>
+<span class="s1">import androidx.compose.foundation.layout.Arrangement</span>
+<span class="s1">import androidx.compose.foundation.layout.Column</span>
+<span class="s1">import androidx.compose.foundation.layout.fillMaxSize</span>
+<span class="s1">import androidx.compose.foundation.layout.padding</span>
+<span class="s1">import androidx.compose.material3.MaterialTheme</span>
+<span class="s1">import androidx.compose.material3.Surface</span>
+<span class="s1">import androidx.compose.material3.Text</span>
+<span class="s1">import androidx.compose.runtime.Composable</span>
+<span class="s1">import androidx.compose.ui.Alignment</span>
+<span class="s1">import androidx.compose.ui.Modifier</span>
+<span class="s1">import androidx.compose.ui.text.style.TextAlign</span>
+<span class="s1">import androidx.compose.ui.tooling.preview.Preview</span>
+<span class="s1">import androidx.compose.ui.unit.dp</span>
+<span class="s1">import androidx.compose.ui.unit.sp</span>
+<span class="s1">import com.example.happybirthdayappnadya.ui.theme.HappyBirthdayAppNadyaTheme</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : ComponentActivity() {</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContent {</span>
+            <span class="s1">HappyBirthdayAppNadyaTheme {</span>
+                <span class="s2">// A surface container using the 'background' color from the theme</span>
+                <span class="s1">Surface(</span>
+                    <span class="s1">modifier = Modifier.fillMaxSize()</span><span class="s0">,</span>
+                    <span class="s1">color = MaterialTheme.colorScheme.background</span>
+                <span class="s1">) {</span>
+                    <span class="s1">GreetingText (</span>
+                        <span class="s1">message = </span><span class="s3">&quot;Happy Birthday Nad!&quot;</span><span class="s0">,</span>
+                        <span class="s1">from = </span><span class="s3">&quot;From Zuhria&quot;</span><span class="s0">,</span>
+                        <span class="s1">modifier = Modifier.padding(</span><span class="s4">8</span><span class="s1">.dp)</span>
+                    <span class="s1">)</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">GreetingText(message: String</span><span class="s0">, </span><span class="s1">from: String</span><span class="s0">, </span><span class="s1">modifier: Modifier = Modifier) {</span>
+    <span class="s1">Column(</span>
+        <span class="s1">verticalArrangement = Arrangement.Center</span><span class="s0">,</span>
+        <span class="s1">modifier = modifier</span>
+    <span class="s1">) {</span>
+        <span class="s1">Text(</span>
+            <span class="s1">text = message</span><span class="s0">,</span>
+            <span class="s1">fontSize = </span><span class="s4">100</span><span class="s1">.sp</span><span class="s0">,</span>
+            <span class="s1">lineHeight = </span><span class="s4">116</span><span class="s1">.sp</span><span class="s0">,</span>
+            <span class="s1">textAlign = TextAlign.Center</span>
+        <span class="s1">)</span>
+        <span class="s1">Text(</span>
+            <span class="s1">text = from</span><span class="s0">,</span>
+            <span class="s1">fontSize = </span><span class="s4">36</span><span class="s1">.sp</span><span class="s0">,</span>
+            <span class="s1">modifier = Modifier</span>
+                <span class="s1">.padding(</span><span class="s4">16</span><span class="s1">.dp)</span>
+                <span class="s1">.align(alignment = Alignment.End)</span>
+        <span class="s1">)</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s1">@Preview(showBackground = </span><span class="s0">true</span><span class="s1">)</span>
+<span class="s1">@Composable</span>
+<span class="s0">fun </span><span class="s1">GreetingPreview() {</span>
+    <span class="s1">HappyBirthdayAppNadyaTheme {</span>
+        <span class="s1">GreetingText(message = </span><span class="s3">&quot;Happy Birthday Nad!&quot;</span><span class="s0">, </span><span class="s1">from=</span><span class="s3">&quot;From Zuhria&quot;</span><span class="s1">)</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
